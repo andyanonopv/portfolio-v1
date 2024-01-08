@@ -2,22 +2,22 @@ document.addEventListener('DOMContentLoaded',function() {
     const data = {
         "items": [
             {
-              "imgPath": "/assets/img/img-1.avif",
+              "imgPath": "./assets/img/img-1.avif",
               "title": "Project 1",
               "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             },
             {
-              "imgPath": "/assets/img/img-2.avif",
+              "imgPath": "./assets/img/img-2.avif",
               "title": "Project 2",
               "paragraph": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
             },
             {
-              "imgPath": "/assets/img/img-3.avif",
+              "imgPath": "./assets/img/img-3.avif",
               "title": "Project 3",
               "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
             },
             {
-                "imgPath": "/assets/img/img-4.avif",
+                "imgPath": "./assets/img/img-4.avif",
                 "title": "Project 4",
                 "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
             }
@@ -27,46 +27,46 @@ document.addEventListener('DOMContentLoaded',function() {
     const gridItems = document.querySelectorAll(".grid-item");
     const h1Elements = document.querySelectorAll('.flex-circle h1');
 
-    // function hireMe() {
-    //     const hireButton = document.getElementById('hire');
+    function hireMe() {
+        const hireButton = document.querySelector('.resumeBtn');
 
-    //     hireButton.addEventListener('click', function () {
-    //         // Replace the file path with the actual path to your hire_me.txt file
-    //         const filePath = "/assets/resume/hire_me.txt";
+        hireButton.addEventListener('click', function () {
+            // Replace the file path with the actual path to your hire_me.txt file
+            const filePath = "./assets/resume/hire_me.txt";
     
-    //         // Fetch the content of the file
-    //         fetch(filePath)
-    //             .then(response => {
-    //                 if (!response.ok) {
-    //                     throw new Error(`Failed to fetch file: ${filePath}`);
-    //                 }
-    //                 return response.text();
-    //             })
-    //             .then(fileContent => {
-    //                 // Create a Blob with the content
-    //                 const blob = new Blob([fileContent], { type: 'text/plain' });
+            // Fetch the content of the file
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Failed to fetch file: ${filePath}`);
+                    }
+                    return response.text();
+                })
+                .then(fileContent => {
+                    // Create a Blob with the content
+                    const blob = new Blob([fileContent], { type: 'text/plain' });
     
-    //                 // Create a link element
-    //                 const link = document.createElement('a');
+                    // Create a link element
+                    const link = document.createElement('a');
     
-    //                 // Set the href attribute to the object URL of the Blob
-    //                 link.href = URL.createObjectURL(blob);
+                    // Set the href attribute to the object URL of the Blob
+                    link.href = URL.createObjectURL(blob);
     
-    //                 // Set the download attribute with the desired file name
-    //                 link.download = 'hire_me.txt';
+                    // Set the download attribute with the desired file name
+                    link.download = 'hire_me.txt';
     
-    //                 // Append the link to the document
-    //                 document.body.appendChild(link);
+                    // Append the link to the document
+                    document.body.appendChild(link);
     
-    //                 // Trigger a click on the link to start the download
-    //                 link.click();
+                    // Trigger a click on the link to start the download
+                    link.click();
     
-    //                 // Remove the link from the document
-    //                 document.body.removeChild(link);
-    //             })
-    //             .catch(error => console.error(error));
-    //     });
-    // }
+                    // Remove the link from the document
+                    document.body.removeChild(link);
+                })
+                .catch(error => console.error(error));
+        });
+    }
     
     function displayMenu() {
         const hamburgerMenuIcon = document.getElementById('hamburgerMenu');
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded',function() {
     displayPortfolio();
     displayTextItem();
     displayMenu();
-    
+    hireMe();
     // console.log(hireMe())
 })
 
