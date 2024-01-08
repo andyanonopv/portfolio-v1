@@ -1,0 +1,23 @@
+@media screen and (max-width: 560px) {
+    .navbar {
+        width: 100vw;
+    }
+    .nav-items li a {
+        display: none;
+    }
+    #hamburgerMenu {
+        display: inline-block;
+    }
+    .welcome-section {
+        width: auto;
+    }
+    .section-center {
+        grid-template-columns: 1fr;
+    }
+    .flex-container {
+        flex-direction: column;
+    }
+    .grid-resume-item {
+        display: block;
+    }
+}

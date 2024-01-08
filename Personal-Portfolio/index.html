@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/media-queries.css">
+    <title>Personal Portfolio</title>
+</head>
+<body>
+    <!--Navbar-->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-items">
+                <li>
+                    <a href="#" class="nav-item">Homepage</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">Skills</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">Resume</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item">Contact</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-item" id="hamburgerMenu"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hamburger-menu">
+        <ul>
+            <li><a href="#"><i class="fa-solid fa-xmark close"></i></a></li>
+            <li><a href="#">Homepage</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!--Homepage-->
+    <section class="homepage">
+        <div class="welcome-section">
+            <h1>Hello, I`m Andrew</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                Pariatur corrupti, eum modi commodi expedita totam, cumque perferendis neque, magni odio 
+                aut ipsam repudiandae velit? Odit?</p>
+            <a href="assets/resume/hire_me.txt" download="file">Hire Me</a>
+        </div>
+    </section>
+    <!--Portfolio-->
+    <section class="portfolio">
+        <h1>Portfolio<span class="underline"></span></h1>
+        <div class="section-center">
+            <div class="grid-item">
+                
+            </div>
+            <div class="grid-item">
+                
+            </div>
+            <div class="grid-item">
+                
+            </div>
+            <div class="grid-item">
+                
+            </div>
+        </div>
+    </section>
+    <!--Skills-->
+    <section class="skills">
+        <h1>Skills</h1>
+        <div class="flex-container">
+            <div class="flex-item">
+              <div class="outer-circle">
+                <div class="flex-circle">
+                    <h1></h1>
+                </div>
+              </div>
+              <p>the back-bone of every website on the world wide web</p>
+            </div>
+            <div class="flex-item">
+                <div class="outer-circle">
+                    <div class="flex-circle">
+                        <h1></h1>
+                    </div>
+                </div>
+                <p>without css the web would be very ugly</p>
+            </div>
+            <div class="flex-item">
+                <div class="outer-circle">
+                    <div class="flex-circle">
+                        <h1></h1>
+                    </div>
+                </div>
+                <p>complex code to create immersive and rich experiences</p>
+            </div>
+            <div class="flex-item">
+                <div class="outer-circle">
+                    <div class="flex-circle">
+                        <h1></h1>
+                    </div>
+                </div>
+                <p>for creating dynamic and easy to update websites</p>
+            </div>
+        </div>
+    </section>
+    <!--Resume-->
+    <section class="resume">
+        <h1>Resume</h1>
+        <div class="section-resume">
+            <div class="grid-resume-item">
+                <h1>Highschool</h1>
+                <h2>From: 2015-2019</h2>
+                <p>C++: Algorithms <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia enim laboriosam architecto, maiores quas debitis 
+                    incidunt corporis dignissimos! Expedita aperiam voluptatibus quidem corrupti 
+                    dicta consectetur amet iusto, voluptas laborum magni.</span></p>
+            </div>
+            <div class="grid-resume-item">
+                <h1>University</h1>
+                <h2>From: 2019-2023</h2>
+                <p>Java Apps <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia enim laboriosam architecto, maiores quas debitis 
+                    incidunt corporis dignissimos! Expedita aperiam voluptatibus quidem corrupti 
+                    dicta consectetur amet iusto, voluptas laborum magni.</span></p>
+            </div>
+            <button class="resumeBtn">Download PDF</button>
+        </div>
+    </section>
+    <!--Contact-->
+    <section class="contact">
+        <h1>Contact</h1>
+        <div class="contact-container">
+            <form id="contactForm" action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+    
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+    
+                <button type="submit" id="submitBtn">Submit</button>
+            </form>
+        </div>
+    </section>
+    <!--Footer-->
+    <footer>
+        <h1>Socials</h1>
+        <section class="socials">
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-github"></i>
+            <i class="fa-brands fa-discord"></i>
+            <i class="fa-brands fa-facebook"></i>
+        </section>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/ce8d3f4e60.js" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,309 @@
+/* Variables */
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --accent-color: #e74c3c;
+    --bg-color: #ecf0f1;
+}
+/* Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    padding: 15px;
+}
+
+section {
+    font-size: large;
+    text-align: center;
+}
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.nav-item {
+    color: var(--bg-color);
+    font-size: 1.3rem;
+}
+
+.nav-item:active {
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+}
+
+#hamburgerMenu {
+    display: none;
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.hamburger-menu ul {
+    list-style: none;
+}
+
+.hamburger-menu ul li {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hamburger-menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+}
+/* Homepage */
+.homepage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 93vh;
+    padding: 2rem;
+    background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)),
+              linear-gradient(rgba(52, 152, 219, 0.6), rgba(52, 152, 219, 0.6)),
+              url('/assets/img/portfolio.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 1.4rem;
+}
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    color: var(--bg-color);
+    text-align: left;
+}
+
+#hire {
+    width: 150px;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    margin: 0 auto;
+    font-size: large;
+    border-radius: 10px;
+}
+
+#hire:hover {
+    background-color: var(--secondary-color);
+}
+/* Portfolio */
+
+.underline {
+    font-size: 2.3em;
+    color: #e74c3c;
+    border-bottom: 4px solid #e74c3c; 
+    display: inline-block; 
+}
+
+.section-center {
+    width: 90vw;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    margin: 0 auto;
+}
+
+.grid-item {
+    height: 300px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8); /* Adjust the background color and opacity */
+    color: #fff;
+}
+
+.flex-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px;
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+.flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.flex-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-color);
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%; 
+    background-color: var(--primary-color); 
+    margin: 0 auto; 
+}
+
+.flex-circle h1 {
+    text-align: center;
+    font-size: 16px;
+}
+
+.outer-circle {
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    background-color: #ccc; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px; 
+}
+/* Resume */
+.section-resume {
+    display: grid;
+    grid-template-rows: 1fr;
+    padding: 15px;
+    background-color: var(--bg-color);
+}
+.grid-resume-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    color: var(--primary-color);
+}
+.grid-resume-item p {
+    text-align: center;
+    grid-column-start: span 2;
+}
+.resumeBtn {
+    width: 150px;
+    padding: 10px;
+    margin: 5px;
+    justify-self: center;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+/* Contact Form */
+.contact {
+    padding: 2rem;
+}
+
+.contact-container {
+    max-width: 600px;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    margin: 0 auto;
+}
+
+#contactForm {
+    display: grid;
+    grid-gap: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+/* Footer */
+footer {
+    background-color: var(--bg-color);
+}
+
+footer h1 {
+    text-align: center;
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.socials i {
+    font-size: 2rem;
+    color: var(--primary-color);
+}
