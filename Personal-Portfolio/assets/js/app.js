@@ -41,6 +41,46 @@ document.addEventListener('DOMContentLoaded',function() {
                   "imgPath": "./assets/img/img-4.avif",
                   "title": "Project 4",
                   "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              },
+              {
+                "imgPath": "./assets/img/img-1.avif",
+                "title": "Project 1",
+                "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              },
+              {
+                "imgPath": "./assets/img/img-2.avif",
+                "title": "Project 2",
+                "paragraph": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              },
+              {
+                "imgPath": "./assets/img/img-3.avif",
+                "title": "Project 3",
+                "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              },
+              {
+                  "imgPath": "./assets/img/img-4.avif",
+                  "title": "Project 4",
+                  "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              },
+              {
+                "imgPath": "./assets/img/img-1.avif",
+                "title": "Project 1",
+                "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              },
+              {
+                "imgPath": "./assets/img/img-2.avif",
+                "title": "Project 2",
+                "paragraph": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+              },
+              {
+                "imgPath": "./assets/img/img-3.avif",
+                "title": "Project 3",
+                "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+              },
+              {
+                  "imgPath": "./assets/img/img-4.avif",
+                  "title": "Project 4",
+                  "paragraph": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
               }
           ]
     }
@@ -130,9 +170,12 @@ document.addEventListener('DOMContentLoaded',function() {
     
     function displayPortfolio() {
         let maxIndex = 4;
+        const maxItemsDisplayed = 9;
         const displayedItems = new Set(); // Create a Set to track displayed items
     
         gridItems.forEach((gridItem, index) => {
+
+          if(index < maxIndex) {
             const imgPath = data.items[index].imgPath;
             const title = data.items[index].title;
             const paragraph = data.items[index].paragraph;
@@ -170,9 +213,9 @@ document.addEventListener('DOMContentLoaded',function() {
                   overlayContent.style.display = "none";
                 });
             }
-            if(index >= maxIndex) {
-                gridItem.style.display = 'none';
-            }
+           } else {
+            gridItem.style.display = 'none';
+           }
         });
     }
     
